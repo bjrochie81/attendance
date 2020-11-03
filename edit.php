@@ -60,7 +60,8 @@
             <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
         
-        <button type="submit" name="submit" class="btn btn-info btn-block">Save Changes</button>
+        <a href="viewrecords.php" class="btn btn-secondary">Back To List</a>
+        <button type="submit" name="submit" class="btn btn-info">Save Changes</button>
     </form>
 
 <?php }?>
