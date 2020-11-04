@@ -67,17 +67,7 @@
             </p>
 
         </div>
-    </div>
-
-    <?php
-        echo $_POST['firstname'];
-        echo $_POST['lastname'];
-        echo $_POST['dob'];
-        echo $_POST['specialty'];
-        echo $_POST['email'];
-        echo $_POST['phone'];
-    
-    ?>
+    </div>   
 
 <br>
 <br>
