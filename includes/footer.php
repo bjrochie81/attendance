@@ -1,6 +1,6 @@
 
 <div id = "footer">
-    <?php echo 'Copyright ' . date('y'); ?>
+    <?php echo 'Copyright &copy ' . date('yy') . " Barrington Rochester."; ?>
 </div>
 </div >
 <!-- Optional JavaScript; choose one of the two! -->
