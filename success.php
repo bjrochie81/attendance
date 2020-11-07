@@ -9,7 +9,7 @@
         $dob = $_POST['dob'];
         $email = $_POST['email'];
         $contact = $_POST['phone'];
-        $specialty = $_POST['specialty'];
+        $specialty = $_POST['name'];
         // call function to insert and track if successful or not
         $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
         if($isSuccess){
@@ -48,7 +48,7 @@
                 <?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?>
             </h5>
             <h6 class="card-subtitle mb-2 text-muted">
-                <?php echo $_POST['name']; ?>
+                <?php echo $_POST['specialty']; ?>
             </h6>
             <p class="card-text">
                 Date of Birth: <?php echo $_POST['dob']; ?>
