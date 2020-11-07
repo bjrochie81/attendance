@@ -20,7 +20,7 @@
                 $stmt->bindparam(':dob', $dob);
                 $stmt->bindparam(':email', $email);
                 $stmt->bindparam(':contact', $contact);
-                $stmt->bindparam(':name', $specialty);
+                $stmt->bindparam(':specialty', $specialty);
                 // execute statement
                 $stmt->execute();
                 return true;
