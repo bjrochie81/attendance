@@ -9,7 +9,7 @@
         $dob = $_POST['dob'];
         $email = $_POST['email'];
         $contact = $_POST['phone'];
-        $specialty = $_POST['name'];
+        $specialty = $_POST['specialty'];
         // call function to insert and track if successful or not
         $isSuccess = $crud->insertAttendees($fname, $lname, $dob, $email, $contact, $specialty);
         if($isSuccess){
