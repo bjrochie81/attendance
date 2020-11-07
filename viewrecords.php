@@ -1,12 +1,9 @@
 <?php
     $title = 'View Records';
-
     require_once 'includes/header.php';
     require_once 'db/db_con.php'; 
-
     $result = $crud->getAttendees();
 ?>
-
     <table class="table">
         <tr>
             <th>No.</th>
@@ -30,11 +27,8 @@
             </tr>
         <?php }?>
     </table>
-
-
 <br>
 <br>
 <br>
 <br>
-
 <?php require_once 'includes/footer.php'; ?>

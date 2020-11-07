@@ -1,9 +1,7 @@
-
 <?php
     $title = 'Index';
     require_once 'includes/header.php';
     require_once 'db/db_con.php'; 
-
     $result = $crud->getSpecialties();
 ?>
     <!--
@@ -14,11 +12,9 @@
         - Email Address
         - Contact Number
     -->
-
     <h1 class = "text-center">Registration for IT Conference</h1>
-
     <form method = "post" action =" success.php">
-    <div class="form-group">
+       <div class="form-group">
             <label for="firstname">First Name</label>
             <input required type="text" class="form-control" id="firstname" name="firstname">
         </div>
@@ -35,7 +31,6 @@
             <select class="form-control" id="specialty" name="specialty">
                 <?php while($r = $result->fetch(PDO::FETCH_ASSOC)) {?>
                     <option value="<?php echo $r['specialty_id'] ?>"><?php echo $r['name']; ?></option>
-
                 <?php }?>
             </select>
         </div>
@@ -48,15 +43,13 @@
             <label for="phone">Contact Number</label>
             <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" >
             <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
-        </div>
-        
+        </div>        
         <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
 <br>
 <br>
 <br>
 <br>
-
 <?php require_once 'includes/footer.php'; ?>
 
     

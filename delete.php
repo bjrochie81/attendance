@@ -6,7 +6,6 @@
     }else{
         // Get id values
         $id = $_GET['id'];
-
         // Call delete function
         $result = $crud->deleteAttendee($id);
         // Redirect to list
@@ -18,5 +17,4 @@
             include 'includes/errormessage.php';
         }
     }
-
 ?>

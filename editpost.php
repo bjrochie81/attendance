@@ -10,7 +10,6 @@
         $email = $_POST['email'];
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
-
         //Call crud function
         $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty);
          //Redirect to indext.php
@@ -20,20 +19,8 @@
          else{
             include 'includes/errormessage.php';
          }
-
     }
     else{
         include 'includes/errormessage.php';
     }
-
-    
-
-
-
-
-
-
-
-
-
 ?>

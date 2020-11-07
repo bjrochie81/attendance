@@ -2,9 +2,7 @@
     $title = 'Edit Data';
     require_once 'includes/header.php';
     require_once 'db/db_con.php'; 
-
     $result = $crud->getSpecialties();
-
     if(!isset($_GET['id']))
     {
         //echo 'error';
@@ -13,13 +11,9 @@
     }
     else{
         $id = $_GET['id'];
-        $attendee = $crud->getAttendeeDetails($id);
-    
-    
+        $attendee = $crud->getAttendeeDetails($id);       
 ?>
-
     <h1 class = "text-center">Edit Data</h1>
-
     <form method = "post" action =" editpost.php">
         <input type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>" />
     <div class="form-group">
@@ -58,16 +52,13 @@
             <label for="phone">Contact Number</label>
             <input type="text" class="form-control" id="phone" value="<?php echo $attendee['contactnumber'] ?>" name="phone" aria-describedby="phoneHelp" >
             <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
-        </div>
-        
+        </div>        
         <a href="viewrecords.php" class="btn btn-secondary">Back To List</a>
         <button type="submit" name="submit" class="btn btn-info">Save Changes</button>
     </form>
-
 <?php }?>
 <br>
 <br>
 <br>
 <br>
-
 <?php require_once 'includes/footer.php'; ?>
