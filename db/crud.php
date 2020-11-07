@@ -10,7 +10,7 @@
         public function insertAttendees($fname, $lname, $dob, $email, $contact, $specialty){
             try{
                 // define sql statement to be executed
-                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty)
+                $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id)
                 VALUES (:fname, :lname, :dob, :email, :contact, :specialty)";
                 // prepare the sql statement for execution
                 $stmt = $this->db->prepare($sql);
