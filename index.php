@@ -43,7 +43,13 @@
             <label for="phone">Contact Number</label>
             <input type="text" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" >
             <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
-        </div>        
+        </div>
+        <br/>
+        <div class="custom-file">
+            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >
+            <label class="custom-file-lable" for="avatar">Choose File</label>
+            <small id="avatar" class="form-text text-danger">File Upload is Optional</small>  
+        </div>         
         <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
 <br>

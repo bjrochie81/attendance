@@ -36,7 +36,7 @@
             <select class="form-control" id="specialty" name="specialty">
                 <?php while($r = $result->fetch(PDO::FETCH_ASSOC)) {?>
                     <option value="<?php echo $r['specialty_id'] ?>" <?php if($r['specialty_id'] 
-                        == $attendee['specialty_id']) echo 'selected'?>>
+                        == $attendee['specialty_id']) echo 'selected' ?>>
                         <?php echo $r['name']; ?>
                     </option>
                 <?php }?>
