@@ -3,12 +3,12 @@
 
     class SendEmail{
         public static function SendMail($to, $subject, $content){
-            $key = 'Add your API key here';
+            $key = '6E11E5BD8F91E05B3A85AEF810E51E0D856E57E85209911BDF88554200DFF69D354F44191246CF686B955C2A4B324215';
             $url = 'https://api.elasticemail.com/v2/email/send';
 
             try {
 
-                $email = array('from' => 'bjrochie@hotmail.com',
+                $email = array('from' => 'bjrochie81@gmail.com',
                 'fromName' => 'Barrington Rochester',
                 'apikey' => $key,
                 'subject' => $subject,
