@@ -13,7 +13,7 @@
         - Contact Number
     -->
     <h1 class = "text-center">Registration for IT Conference</h1>
-    <form method = "post" action =" success.php" enctype="multipart/form-data">
+    <form method = "post" action ="success.php" enctype="multipart/form-data">
        <div class="form-group">
             <label for="firstname">First Name</label>
             <input required type="text" class="form-control" id="firstname" name="firstname">
@@ -49,7 +49,9 @@
             <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" >
             <label class="custom-file-label" for="avatar">Choose File Image</label>
             <small id="avatar" class="form-text text-danger">File Upload is Optional</small>  
-        </div>         
+        </div>   
+        <br/>   
+           <br/>
         <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
 <br>
