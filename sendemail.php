@@ -8,8 +8,8 @@
 
             try {
 
-                $email = array('from' => 'YourEmailAddress@email.com',
-                'fromName' => 'Your Name',
+                $email = array('from' => 'bjrochie@hotmail.com',
+                'fromName' => 'Barrington Rochester',
                 'apikey' => $key,
                 'subject' => $subject,
                 'to' => $to,
