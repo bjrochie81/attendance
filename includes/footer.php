@@ -1,6 +1,6 @@
 
-<div id = "footer">
-    <?php echo 'Copyright &copy ' . date('yy') . " Barrington Rochester."; ?>
+<div id = "footer" class="p-3 bg-primary text-white fixed-bottom">
+    <p class="text-center"> Copyright &copy; - Barrington Rochester IT Conference Attendace System <?php echo date('yy'); ?></p>
 </div>
 </div >
 <!-- Optional JavaScript; choose one of the two! -->

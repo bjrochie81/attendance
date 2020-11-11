@@ -12,7 +12,7 @@
         $specialty = $_POST['specialty'];
         //Call crud function
         $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty);
-         //Redirect to indext.php
+         //Redirect to index.php
          if($result){
              header("Location: viewrecords.php");
          }

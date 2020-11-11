@@ -1,7 +1,9 @@
 <?php
     $title = 'Edit Data';
     require_once 'includes/header.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/db_con.php'; 
+
     $result = $crud->getSpecialties();
     if(!isset($_GET['id']))
     {

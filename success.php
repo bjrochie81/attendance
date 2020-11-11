@@ -1,7 +1,9 @@
 <?php
     $title = 'Success';
     require_once 'includes/header.php';
-    require_once 'db/db_con.php';   
+    require_once 'db/db_con.php'; 
+    require_once 'sendmail.php';  
+
     if(isset($_POST['submit'])){
         // extract values from the $_POST array
         $fname = $_POST['firstname'];
@@ -11,10 +13,10 @@
         $contact = $_POST['phone'];
         $specialty = $_POST['specialty'];
 
-        $orgi_file = $_FILES["avatar"]["tmp_name"];
+        $orig_file = $_FILES["avatar"]["tmp_name"];
         $ext = pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-        $target_dir = "uploads/*";
-        $destination = "$target_dir$contact.$ext";
+        $target_dir = "uploads/";
+        $destination = "$target_dir$contact . $ext";
         move_uploaded_file($orig_file,$destination);
 
         // call function to insert and track if successful or not
@@ -22,6 +24,7 @@
         $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
+            SendEmail::SendMail($email, 'Welcome to IT Conference 2020', 'You have successfully registered for this year\'s IT Conference');
             include 'includes/successmessage.php';
         }
         else{
@@ -58,7 +61,7 @@
                 <?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?>
             </h5>
             <h6 class="card-subtitle mb-2 text-muted">
-                <?php echo $_POST['specialty']; ?>
+                <?php echo $specialtyName['name']; ?>
             </h6>
             <p class="card-text">
                 Date of Birth: <?php echo $_POST['dob']; ?>

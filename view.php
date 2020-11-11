@@ -1,7 +1,9 @@
 <?php
     $title = 'View Record';
     require_once 'includes/header.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/db_con.php'; 
+
     // Get attendee by id
     if(!isset($_GET['id'])){
         echo "<h1 class='text-danger'>Please check details and try again</h1>";
